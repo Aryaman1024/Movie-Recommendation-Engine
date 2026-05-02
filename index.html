@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>🎬 MOVIEFLIX DASHBOARD</h1>
+
+<!-- FORM -->
+<form action="/add" method="post" autocomplete="off">
+    <input type="text" name="movie" placeholder="Movie Name" required>
+
+    <select name="genre">
+        <option>Action</option>
+        <option>Comedy</option>
+        <option>Drama</option>
+        <option>Sci-Fi</option>
+        <option>Romance</option>
+        <option>Horror</option>
+    </select>
+
+    <input type="number" name="rating" step="0.1" min="0" max="10" placeholder="Rating (0-10)" required>
+
+    <button type="submit">Add Movie</button>
+</form>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div id="toast" class="toast">
+        {{ messages[0] }}
+    </div>
+  {% endif %}
+{% endwith %}
+
+<!-- STATS -->
+<h2>⭐ Average Rating: {{ avg }}</h2>
+<h2>🏆 Top Movie: {{ top.Movie }} ({{ top.Rating }})</h2>
+
+<h3>Total Movies: {{ total }}</h3>
+<h3>Max Rating: {{ max }}</h3>
+<h3>Min Rating: {{ min }}</h3>
+
+<div class="divider"></div>
+
+<!-- CHART -->
+<h2>📊 Genre Distribution</h2>
+
+<script id="chart-data" type="application/json">
+{{ genre_counts | tojson }}
+</script>
+
+<div class="chart-container">
+    <canvas id="chart"></canvas>
+</div>
+
+<div class="divider"></div>
+
+<!-- RECOMMENDED -->
+<h2>🎯 Recommended Movies (Rating > 8)</h2>
+<div class="table-container">
+<table>
+<tr>
+    <th>ID</th>
+    <th>Movie</th>
+    <th>Genre</th>
+    <th>Rating</th>
+</tr>
+{% for m in recommended %}
+<tr>
+    <td>{{ m.ID }}</td>
+    <td>{{ m.Movie }}</td>
+    <td>{{ m.Genre }}</td>
+    <td>{{ m.Rating }}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+
+<!-- QUANTILE -->
+<h2>🔥 Top 10% Movies</h2>
+<div class="table-container">
+<table>
+<tr>
+    <th>ID</th>
+    <th>Movie</th>
+    <th>Genre</th>
+    <th>Rating</th>
+</tr>
+{% for m in top10 %}
+<tr>
+    <td>{{ m.ID }}</td>
+    <td>{{ m.Movie }}</td>
+    <td>{{ m.Genre }}</td>
+    <td>{{ m.Rating }}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+
+<!-- 🔍 LIVE SEARCH (FIXED) -->
+<h2>🔎 Search Movie</h2>
+<input type="text" id="searchInput" placeholder="Search Movie..." onkeyup="searchMovie()">
+
+<!-- ALL MOVIES -->
+<h2>📋 Movie List</h2>
+<div class="table-container">
+<table id="movieTable">
+<tr>
+    <th>ID</th>
+    <th>Movie</th>
+    <th>Genre</th>
+    <th>Rating</th>
+    <th>Action</th>
+</tr>
+
+{% for m in movies %}
+<tr>
+    <td>{{ m.ID }}</td>
+    <td>{{ m.Movie }}</td>
+    <td>{{ m.Genre }}</td>
+    <td>{{ m.Rating }}</td>
+    <td>
+        <a href="/delete/{{ m.ID }}" style="color:red;">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+
+</table>
+</div>
+
+<!-- STATS -->
+<h2>📊 Statistical Summary</h2>
+<pre>{{ stats }}</pre>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+<script>
+if (window.location.search.includes("updated=1")) {
+    window.history.replaceState({}, document.title, "/");
+}
+</script>
+
+</body>
+</html>

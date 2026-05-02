@@ -1,0 +1,182 @@
+/* BODY */
+body {
+    font-family: 'Segoe UI', Arial;
+    background: linear-gradient(to bottom, #000000, #141414);
+    color: #fff;
+    text-align: center;
+}
+
+/* HEADER */
+h1 {
+    color: #e50914;
+    margin-top: 20px;
+}
+
+/* FORM */
+form {
+    margin: 20px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 6px;
+    border: none;
+}
+
+button {
+    background: #e50914;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #b20710;
+}
+
+/* HEADINGS */
+h2 {
+    margin: 8px 0;
+    color: #ffffff; /* less red, more clean */
+}
+
+h3 {
+    color: #aaa;
+}
+
+/* REMOVE EXTRA GAP */
+hr {
+    display: none;
+}
+
+/* CHART CONTAINER */
+.chart-container {
+    width: 65%;
+    max-width: 750px;
+    margin: 10px auto;
+    background: #141414;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* CHART */
+canvas {
+    height: 220px !important;
+    width: 100% !important;
+}
+
+/* TABLE CONTAINER */
+.table-container {
+    max-height: 260px;
+    overflow-y: auto;
+    margin: 15px auto;
+    width: 75%;
+    background: #181818;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* HEADER */
+th {
+    background: linear-gradient(to right, #e50914, #b20710);
+    color: white;
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* ROWS */
+td {
+    padding: 12px;
+    color: #ddd;
+}
+
+/* ZEBRA EFFECT */
+tr:nth-child(even) {
+    background: #202020;
+}
+
+tr:nth-child(odd) {
+    background: #181818;
+}
+
+/* HOVER EFFECT */
+tr:hover {
+    background: rgba(229, 9, 20, 0.15);
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+
+/* RATING HIGHLIGHT */
+td:last-child {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+/* ID subtle */
+td:first-child {
+    color: #888;
+}
+
+/* SCROLLBAR */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #e50914;
+    border-radius: 10px;
+}
+
+.divider {
+    width: 80%;
+    height: 1px;
+    margin: 15px auto;
+    background: linear-gradient(to right, transparent, #444, transparent);
+}
+
+/* TOAST POPUP */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #1db954;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    animation: slideIn 0.5s ease, fadeOut 0.5s ease 2.5s forwards;
+}
+
+/* animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}

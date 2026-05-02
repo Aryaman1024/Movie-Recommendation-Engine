@@ -1,0 +1,49 @@
+Movie,Genre,Rating
+Inception,Sci-Fi,8.8
+Titanic,Romance,9.0
+Avengers: Endgame,Action,8.4
+The Dark Knight,Action,9.0
+Interstellar,Sci-Fi,8.6
+Joker,Drama,8.4
+Fight Club,Drama,8.8
+The Matrix,Sci-Fi,8.7
+Gladiator,Action,8.5
+The Godfather,Crime,9.2
+3 Idiots,Comedy,8.9
+Dangal,Sports,8.3
+PK,Comedy,8.1
+Lagaan,Sports,8.2
+Zindagi Na Milegi Dobara,Drama,8.1
+Gully Boy,Drama,8.0
+Kabir Singh,Romance,7.5
+Sholay,Action,8.2
+Bahubali: The Beginning,Action,8.0
+Bahubali 2: The Conclusion,Action,8.3
+KGF Chapter 1,Action,8.2
+KGF Chapter 2,Action,8.4
+Drishyam,Thriller,8.2
+Andhadhun,Thriller,8.3
+War,Action,6.5
+Pathaan,Action,6.0
+Dilwale Dulhania Le Jayenge,Romance,8.1
+Kal Ho Naa Ho,Romance,8.0
+My Name is Khan,Drama,8.0
+Rockstar,Drama,7.7
+The Shawshank Redemption,Drama,9.3
+Forrest Gump,Drama,8.8
+The Wolf of Wall Street,Biography,8.2
+The Social Network,Biography,7.7
+Spider-Man: No Way Home,Action,8.3
+Iron Man,Action,7.9
+Doctor Strange,Sci-Fi,7.5
+Black Panther,Action,7.3
+Mission Impossible Fallout,Action,7.7
+Top Gun Maverick,Action,8.3
+John Wick,Action,7.4
+The Conjuring,Horror,7.5
+It,Horror,7.3
+A Quiet Place,Horror,7.5
+Hereditary,Horror,7.3
+Parasite,Thriller,8.5
+Oldboy,Thriller,8.4
+Train to Busan,Thriller,7.6
