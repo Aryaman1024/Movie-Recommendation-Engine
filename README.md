@@ -19,14 +19,24 @@ This project is built using fundamental concepts of computer science:
 - Sorting Techniques for organizing ratings
 - Basic Recommendation Logic (rule-based filtering)
 
-The recommendation system works by comparing user preferences (such as genre or rating) with stored movie data and suggesting the most relevant results.
+- Frontend:
+  - HTML5
+  - CSS3
+  - JavaScript
 
-# Technology Stack
-- Programming Language: Java / C / C++ / Python (update accordingly)
-- Development Environment: Eclipse / VS Code
-- Platform: Desktop Application / Console-Based
+- Backend:
+  - Python
+  - Flask (Web Framework)
 
-# Execution Steps
+- Data Processing & Analysis
+  - Data Preprocessing Techniques (cleaning, filtering, structuring)
+  - Basic Data Analytics for rating analysis and insights
+
+- Tools & Environment
+  - VS Code / Any Code Editor
+  - Web Browser (for running the application)
+  - 
+# Execution Steps:-
 1. Clone the repository:
    ```bash
    git clone https://github.com/YOUR-USERNAME/Movie-Recommender-and-Rating-Analyzer.git
@@ -65,12 +75,11 @@ User login and personalized profiles
 
 # Author
 - ARYAMAN RAJ
-- 
+ 
 # References
 Standard programming documentation
 Data Structures and Algorithms concepts
 Online learning resources
 
 # Conclusion
-
 This project demonstrates how basic programming and data handling techniques can be used to build a practical movie recommendation and analysis system. It serves as a foundation for developing more advanced intelligent systems in the future.
