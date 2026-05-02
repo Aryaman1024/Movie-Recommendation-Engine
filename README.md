@@ -74,7 +74,7 @@ Machine Learning-based recommendation system
 User login and personalized profiles
 
 # Author
-- ARYAMAN RAJ
+ARYAMAN RAJ
  
 # References
 Standard programming documentation
